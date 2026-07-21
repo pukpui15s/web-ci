@@ -38,3 +38,10 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Upload build
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-ci-build
+          path: build/
+          retention-days: 14
